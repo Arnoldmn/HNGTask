@@ -4,4 +4,5 @@
     <string name="do_not_have_an_account_register">Do not have an account? Register</string>
     <string name="register">Register</string>
     <string name="login">Login</string>
+    <string name="already_have_an_account">Already have an account?</string>
 </resources>

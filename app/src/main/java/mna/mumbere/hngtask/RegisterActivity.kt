@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -18,6 +19,7 @@ class RegisterActivity : AppCompatActivity() {
     lateinit var metFname: EditText
     lateinit var metLname: EditText
     lateinit var metPassword: EditText
+    lateinit var mtxtReg: TextView
 
     lateinit var mDatabase: DatabaseReference
 
@@ -35,6 +37,7 @@ class RegisterActivity : AppCompatActivity() {
         metPassword = findViewById(R.id.txtPassword)
         metFname = findViewById(R.id.txtFname)
         metLname = findViewById(R.id.txtLname)
+        mtxtReg = findViewById(R.id.txtReg)
 
         mbtnRegister.setOnClickListener {
 
@@ -62,6 +65,13 @@ class RegisterActivity : AppCompatActivity() {
             createUser(name, lname, email, mpasswor)
 
         }
+
+        mtxtReg.setOnClickListener {
+            val intentLog = Intent(applicationContext, LoginActivity::class.java)
+            startActivity(intentLog)
+        }
+
+
 
     }
 
