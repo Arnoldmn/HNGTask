@@ -31,9 +31,9 @@ class MainActivity : AppCompatActivity() {
         mDatabase.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
 
-                val email = dataSnapshot.child("email").value.toString()
-                val lname = dataSnapshot.child("first name").value.toString()
-                val fname = dataSnapshot.child("first name").value.toString()
+                val email = dataSnapshot.child("email").getValue().toString()
+                val lname = dataSnapshot.child("first name").getValue().toString()
+                val fname = dataSnapshot.child("first name").getValue().toString()
 
                 mtxtEmail.text = email
                 mtxtFname.text = fname
