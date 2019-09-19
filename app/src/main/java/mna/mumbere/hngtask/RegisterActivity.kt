@@ -72,7 +72,6 @@ class RegisterActivity : AppCompatActivity() {
         }
 
 
-
     }
 
     private fun createUser(name: String, lname: String, email: String, mpasswor: String) {
